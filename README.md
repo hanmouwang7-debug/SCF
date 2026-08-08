@@ -37,34 +37,6 @@ The processed datasets generated in this study are available from the correspond
 - **GPU**: NVIDIA GPU with at least 24 GB memory (recommended); CPU mode is possible but slow
 - **Software**: Python 3.9, PyTorch 2.0.0, CUDA 11.8 (if using GPU)
 
----
-
-## Installation Guide
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/hanmouwang7-debug/SCF.git
-   cd SCF
-   ```
-
-2. Create and activate the Conda environment (recommended):
-   ```bash
-   conda env create -f environment.yml
-   conda activate scf_env
-   ```
-   Alternatively, install dependencies using pip:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. Prepare the data:
-   - Place raw data (terrain, meteorology, SCF, NDVI) in `data/raw/` following the expected subdirectory structure.
-   - Run the preprocessing script to generate processed patches and metadata:
-     ```bash
-     python scripts/preprocess_data.py
-     ```
-
----
 
 ## Training Configuration
 
