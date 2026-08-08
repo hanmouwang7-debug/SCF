@@ -1,4 +1,12 @@
-# Snow Distribution Prediction System
+# Landscape preconditioning enables high-resolution prediction of snow cover fraction
+
+*Deep learning framework for snow cover fraction prediction using DeepLabV3+*
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.9](https://img.shields.io/badge/python-3.9-blue.svg)](https://www.python.org/downloads/release/python-390/)
+[![PyTorch 2.0](https://img.shields.io/badge/PyTorch-2.0.0-red.svg)](https://pytorch.org/)
+
+---
 
 ## Snow Prediction Example
 
@@ -6,6 +14,7 @@
 
 This project implements a deep learning framework for predicting snow cover fraction (SCF) using the DeepLabV3+ architecture with a ResNet‑50 backbone. The model integrates multi‑source spatial features (terrain, meteorology, and NDVI) to generate high‑resolution SCF maps.
 
+---
 
 ## Main Features
 
@@ -14,6 +23,7 @@ This project implements a deep learning framework for predicting snow cover frac
 - Physical constraint loss to enforce realistic snow distribution patterns.
 - End‑to‑end training and inference pipeline with visualization tools.
 
+---
 
 ## Data Availability
 
@@ -33,12 +43,22 @@ The processed datasets generated in this study are available from the correspond
 
 ---
 
+## Code Availability
+
+The complete source code for training, validation, testing, and inference is publicly available at:  
+[https://github.com/hanmouwang7-debug/SCF](https://github.com/hanmouwang7-debug/SCF)
+
+This repository facilitates reproduction and further development of the methodology presented in this study.
+
+---
+
 ## System Requirements
 
 - **Operating System**: Windows 10/11, Linux, or macOS
-- **GPU**: NVIDIA GPU with at least 24 GB memory (recommended); 
+- **GPU**: NVIDIA GPU with at least 24 GB memory (recommended)
 - **Software**: Python 3.9, PyTorch 2.0.0, CUDA 11.8 (if using GPU)
 
+---
 
 ## Training Configuration
 
@@ -68,20 +88,3 @@ All experiments followed identical protocols to ensure fair comparison and repro
 ### Training
 ```bash
 python train.py --config configs/config.yaml
-```
-- See [`train.py`](train.py) for detailed training logic.
-- Training configuration is defined in [`configs/config.yaml`](configs/config.yaml).
-
-### Validation
-```bash
-python validate.py --checkpoint outputs/checkpoints/deeplab_best_mae.pth
-```
-- Use [`validate.py`](validate.py) to evaluate on the validation set.
-- The best model checkpoint is saved at [`outputs/checkpoints/deeplab_best_mae.pth`](outputs/checkpoints/deeplab_best_mae.pth).
-
-### Testing
-```bash
-python test.py --checkpoint outputs/checkpoints/deeplab_best_mae.pth
-```
-- Run [`test.py`](test.py) to obtain final test set results.
-
