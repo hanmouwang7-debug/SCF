@@ -97,8 +97,7 @@ python train.py --config configs/config.yaml
 python validate.py --checkpoint outputs/checkpoints/deeplab_best_mae.pth
 ```
 - Use [`validate.py`](validate.py) to evaluate on the validation set.
-- The best model checkpoint is saved at [`outputs/checkpoints/deeplab_best_mae.pth`](outputs/checkpoints/deeplab_best_mae.pth).
-
+  
 ### Testing
 ```bash
 python test.py --checkpoint outputs/checkpoints/deeplab_best_mae.pth
