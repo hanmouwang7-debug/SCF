@@ -42,7 +42,7 @@ The processed datasets generated in this study are available from the correspond
 
 ## Training Configuration
 
-All experiments were performed on the **Alibaba Cloud Elastic GPU** platform using **NVIDIA A10** GPUs (24 GB memory). The software environment was Python 3.9, PyTorch 2.0.0, and CUDA 11.8.
+All experiments were performed on the **Alibaba Cloud Elastic GPU** platform [@AlibabaCloudEGS] using **NVIDIA A10** GPUs (24 GB memory). The software environment was Python 3.9, PyTorch 2.0.0, and CUDA 11.8.
 
 **Optimization settings:**
 - **Optimizer**: AdamW
