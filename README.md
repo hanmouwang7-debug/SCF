@@ -98,16 +98,14 @@ All experiments followed identical protocols to ensure fair comparison and repro
 
 ---
 
-## Usage
-
 ### Training
 ```bash
 python train.py --config configs/config.yaml
 ```
 
-Validation
+## DValidation
 python validate.py --checkpoint outputs/checkpoints/deeplab_best_mae.pth
 
-Testing
+## DTesting
 python test.py --checkpoint outputs/checkpoints/deeplab_best_mae.pth
 
