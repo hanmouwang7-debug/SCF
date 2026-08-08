@@ -1,0 +1,47 @@
+snow-prediction-test/
+├── data/                           # Data directory
+│   ├── raw/                       
+│   │   ├── terrain/               
+│   │   ├── meteorology/           
+│   │   ├── scf/              
+│   │   └── ndvi/                  
+│   ├── processed/                 
+│        ├── terrain/               
+│        ├── scf/             
+│        ├── ndvi/                  
+│        ├── train_metadata.csv     
+│        ├── val_metadata.csv       
+│        └── test_metadata.csv       
+│
+├── models/                        # Model directory
+│   ├── deeplabv3plus.py           # Added: DeepLabv3+ snow cover regression model
+│   ├── losses.py                  # Keep: regression loss + physical constraint loss
+│   └── physics_model.py           # Keep: physical constraint component
+│
+├── utils/                         # Utility functions [Keep all]
+│   ├── __init__.py                
+│   ├── data_loader.py             
+│   ├── visualization.py           
+│   └── physics_utils.py            
+│
+├── configs/                       
+│   └── config.yaml                # Keep, only need to modify model name
+│
+├── outputs/                       
+│   ├── checkpoints/               
+│   │   ├── deeplab_best_mae.pth   # DeepLabv3+ best weights
+│   │   └── deeplab_final.pth      # DeepLabv3+ final weights
+│   ├── samples/                   
+│   ├── predictions/               
+│   └── logs/                      
+│
+├── scripts/                        # Preprocessing scripts [Keep all]
+│   ├── preprocess_data.py                
+│
+├── train.py                       # Modified: replaced with DeepLabv3+ training
+├── validate.py                    # Keep, only modify model import
+├── test.py                        # Keep, only modify model import
+├── predict.py                     # Keep, only modify model import
+├── environment.yml                
+├── requirements.txt               
+└── README.md                      # Updated to DeepLabv3+ version

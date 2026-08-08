@@ -1,0 +1,25 @@
+name: snow-prediction-test
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - pip
+  - numpy
+  - pandas
+  - matplotlib
+  - scikit-learn
+  - pytorch=1.13.1
+  - torchvision
+  - cudatoolkit=11.6  
+  - pyyaml
+  - opencv
+  - tqdm
+  - jupyter
+  - ipykernel
+  - pip:
+      - tensorboard
+      - albumentations
+      - streamlit
+      - scipy
+      - opencv-python-headless
