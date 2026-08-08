@@ -1,0 +1,50 @@
+data:
+  dir: "F:/SCF-Prediction/data/processed"
+  train_csv: "train_metadata.csv"
+  val_csv: "val_metadata.csv"
+  test_csv: "test_metadata.csv"
+  image_size: [256, 256]
+  crs: "EPSG:4326"
+
+training:
+  batch_size: 8
+  epochs: 200
+  lr: 0.0001
+  beta1: 0.5
+  beta2: 0.999
+  loss: "combined"
+  physics_loss_weight: 0.0
+  checkpoint_interval: 5
+  num_workers: 0
+  patience: 15
+  sample_interval: 5
+
+model:
+  deeplabv3plus:
+    in_channels: 9
+    out_channels: 1
+
+  physics:
+    max_snow_slope: 60.0
+    slope_factor: 0.05
+    high_ndvi_threshold: 0.8
+    ndvi_reduction_factor: 0.1
+    melting_temp: 2.0
+    no_precip_threshold: 0.1
+
+paths:
+  checkpoints: "outputs/checkpoints"
+  samples: "outputs/samples"
+  logs: "outputs/logs"
+
+
+ablation:
+  exp_name: "full_9_features"  
+  remove_elevation: false
+  remove_slope: false
+  remove_ndvi: false
+  remove_temperature: false
+  remove_precipitation: false
+  remove_wind_speed: false
+  remove_wind_dir: false
+  remove_humidity: false
