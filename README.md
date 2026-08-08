@@ -36,7 +36,7 @@ The processed datasets generated in this study are available from the correspond
 ## System Requirements
 
 - **Operating System**: Windows 10/11, Linux, or macOS
-- **GPU**: NVIDIA GPU with at least 24 GB memory (recommended); CPU mode is possible but slow
+- **GPU**: NVIDIA GPU with at least 24 GB memory (recommended); 
 - **Software**: Python 3.9, PyTorch 2.0.0, CUDA 11.8 (if using GPU)
 
 
