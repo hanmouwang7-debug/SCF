@@ -98,14 +98,23 @@ All experiments followed identical protocols to ensure fair comparison and repro
 
 ---
 
-## Training
+### Training
 ```bash
 python train.py --config configs/config.yaml
 ```
 
-## Validation
+### Validation
+```bash
 python validate.py --checkpoint outputs/checkpoints/deeplab_best_mae.pth
+```
 
-## Testing
+### Testing
+```bash
 python test.py --checkpoint outputs/checkpoints/deeplab_best_mae.pth
+```
+
+### Inference / Prediction
+```bash
+python predict.py --input path/to/input_data --output path/to/save_predictions
+```
 
