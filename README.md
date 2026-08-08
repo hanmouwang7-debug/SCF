@@ -63,18 +63,25 @@ All experiments followed identical protocols to ensure fair comparison and repro
 
 ---
 
+## Usage
+
 ### Training
 ```bash
 python train.py --config configs/config.yaml
 ```
+- See [`train.py`](train.py) for detailed training logic.
+- Training configuration is defined in [`configs/config.yaml`](configs/config.yaml).
 
 ### Validation
 ```bash
 python validate.py --checkpoint outputs/checkpoints/deeplab_best_mae.pth
 ```
+- Use [`validate.py`](validate.py) to evaluate on the validation set.
+- The best model checkpoint is saved at [`outputs/checkpoints/deeplab_best_mae.pth`](outputs/checkpoints/deeplab_best_mae.pth).
 
 ### Testing
 ```bash
 python test.py --checkpoint outputs/checkpoints/deeplab_best_mae.pth
 ```
+- Run [`test.py`](test.py) to obtain final test set results.
 
