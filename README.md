@@ -43,15 +43,6 @@ The processed datasets generated in this study are available from the correspond
 
 ---
 
-## Code Availability
-
-The complete source code for training, validation, testing, and inference is publicly available at:  
-[https://github.com/hanmouwang7-debug/SCF](https://github.com/hanmouwang7-debug/SCF)
-
-This repository facilitates reproduction and further development of the methodology presented in this study.
-
----
-
 ## System Requirements
 
 - **Operating System**: Windows 10/11, Linux, or macOS
