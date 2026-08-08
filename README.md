@@ -1,5 +1,7 @@
 # Snow Distribution Prediction System
 
+## Snow Prediction Example
+
 ![Snow Prediction Example](outputs/samples/epoch_50_samples.png)
 
 This project implements a deep learning framework for predicting snow cover fraction (SCF) using the DeepLabV3+ architecture with a ResNet‑50 backbone. The model integrates multi‑source spatial features (terrain, meteorology, and NDVI) to generate high‑resolution SCF maps.
