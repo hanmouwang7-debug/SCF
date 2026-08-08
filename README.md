@@ -1,11 +1,9 @@
-```markdown
 # Snow Distribution Prediction System
 
 ![Snow Prediction Example](outputs/samples/epoch_50_samples.png)
 
 This project implements a deep learning framework for predicting snow cover fraction (SCF) using the DeepLabV3+ architecture with a ResNet‑50 backbone. The model integrates multi‑source spatial features (terrain, meteorology, and NDVI) to generate high‑resolution SCF maps.
 
----
 
 ## Main Features
 
@@ -14,7 +12,6 @@ This project implements a deep learning framework for predicting snow cover frac
 - Physical constraint loss to enforce realistic snow distribution patterns.
 - End‑to‑end training and inference pipeline with visualization tools.
 
----
 
 ## Data Availability
 
@@ -108,38 +105,9 @@ All experiments followed identical protocols to ensure fair comparison and repro
 python train.py --config configs/config.yaml
 ```
 
-### Validation
-```bash
+Validation
 python validate.py --checkpoint outputs/checkpoints/deeplab_best_mae.pth
-```
 
-### Testing
-```bash
+Testing
 python test.py --checkpoint outputs/checkpoints/deeplab_best_mae.pth
-```
 
-### Inference / Prediction
-```bash
-python predict.py --input path/to/input_data --output path/to/save_predictions
-```
-
----
-
-## License
-
-This project is distributed under the MIT License. See the `LICENSE` file for more details.
-
----
-
-## Citation
-
-If you use this code or data in your research, please cite our paper:
-
-> *[Your paper citation will be added here once published]*
-
----
-
-## Contributors
-
-- hanmouwang7-debug
-```
